@@ -19,14 +19,19 @@ def apply_coupons(cart, coupons)
       thing = coupon[:item]
       new_name = "#{thing} W/COUPON"
     
-      if cart.has_key?(thing) then
-        #Create the coupon item in the cart
+      #if the coupon item is in the cart and we have enough to qualify for the coupon...
+      if cart.has_key?(thing) && cart[thing][:count] >= coupon[:num] then
+
+        #if the item w/ coupon is already in cart then increment count
         if cart.has_key?(new_name) then
           cart[new_name][:count] += coupon[:num]
+          
+        #otherwise add the key and set count to coupon num
         else
           cart[new_name] = {}
           cart[new_name][:count] = coupon[:num]
         end
+        #update clearance and price
         cart[new_name][:clearance] = true
         cart[new_name][:price] = coupon[:cost] / coupon[:num]
       
