@@ -24,9 +24,9 @@ def apply_coupons(cart, coupons)
         cart[new_name]= {}
         cart[new_name][:clearance] = true
         cart[new_name][:count] = coupon[:num]
+         cart[new_name][:price] = coupon[:cost] / coupon[:num]
 
         #Adjust the old item in the cart w/o coupon
-        cart[new_name][:price] = coupon[:cost] / coupon[:num]
         cart[thing][:count] %= coupon[:num]
         cart[thing][:clearance] = true
   
