@@ -1,7 +1,7 @@
 def consolidate_cart(cart)
   
   cart.map do |n| 
-    n.
+    n.each_pair({}) { memo, 
   end
   
 end
