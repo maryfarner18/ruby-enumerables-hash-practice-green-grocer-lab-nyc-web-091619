@@ -15,10 +15,8 @@ end
 
 def apply_coupons(cart, coupons)
   
-  cart.each_pair do | cart_key, value|
-    coupons.reduce do |coupon_key|
-      
-    end
+  coupons.each do |coupon|
+    coupon.key 
     
   end
   
