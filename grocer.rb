@@ -26,8 +26,9 @@ def apply_coupons(cart, coupons)
         if cart[thing][:count] % coupon[:num] == 0
           cart.delete[thing]
         else
-          cart[thing][:count] = 
+          cart[thing][:count] %= coupon[:num]
         end
+        
       end 
     
   end
