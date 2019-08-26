@@ -14,10 +14,6 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  puts "\nOG Cart = \n #{cart}\n"
-  puts "\nCoupons = \n #{coupons}"
-  
-  
   coupons.each do |coupon|
       thing = coupon[:item]
       new_name = "#{thing} W/COUPON"
@@ -42,15 +38,11 @@ def apply_coupons(cart, coupons)
         cart[thing][:count] -= coupon[:num]
         #cart[thing][:clearance] = true
         
-  
       end 
-    
   end
-  puts "\nNew Cart = \n #{cart}"
-  
   cart
-  
 end
+
 
 def apply_clearance(cart)
   # code here
