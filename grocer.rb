@@ -32,7 +32,7 @@ def apply_coupons(cart, coupons)
           cart[new_name][:count] = coupon[:num]
         end
         #update clearance and price
-        cart[new_name][:clearance] = true
+        cart[new_name][:clearance] = false
         cart[new_name][:price] = coupon[:cost] / coupon[:num]
       
         #Adjust the old item in the cart w/o coupon
