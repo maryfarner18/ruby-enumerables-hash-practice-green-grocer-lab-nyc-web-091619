@@ -5,7 +5,8 @@ def consolidate_cart(cart)
       if cart_hash[key]
         cart_hash[key][:count] += 1
       else
-        cart_hash[key] = n
+        cart_hash[key] = n[key]
+        cart_hash[key][:count] = 1
       end
     end
   end
