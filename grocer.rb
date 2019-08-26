@@ -27,7 +27,7 @@ def apply_coupons(cart, coupons)
         
         cart[thing][:count] %= coupon[:num]
         cart[thing][:clearance] = true
-        puts "new item is #{cart[new_name]}"
+        puts "new item is #{cart[:new_name]}"
         puts "old item is #{cart[thing]}"
       end 
     
