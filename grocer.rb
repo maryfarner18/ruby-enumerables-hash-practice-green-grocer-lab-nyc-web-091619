@@ -21,11 +21,14 @@ def apply_coupons(cart, coupons)
     
       if cart.has_key?(thing) then
         #Create the coupon item in the cart
-        cart[new_name]= {}
+        if cart.has_key?(new_name) then
+          cart[new_name][:count] += coupon[:num]
+        else
+          cart[new_name] = {}
         cart[new_name][:clearance] = true
         cart[new_name][:count] = coupon[:num]
-         cart[new_name][:price] = coupon[:cost] / coupon[:num]
-
+        cart[new_name][:price] = coupon[:cost] / coupon[:num]
+        end
         #Adjust the old item in the cart w/o coupon
         cart[thing][:count] -= coupon[:num]
         cart[thing][:clearance] = true
