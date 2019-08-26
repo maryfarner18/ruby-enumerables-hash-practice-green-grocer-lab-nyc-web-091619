@@ -19,9 +19,7 @@ def apply_coupons(cart, coupons)
       thing = coupon[:item]
       new_name = "#{thing} W/COUPON"
       if cart.has_key?(thing)
-
         cart[:new_name][:clearance] = true
-        puts "1"
         cart[:new_name][:count] = cart[thing][:count] / coupon[:num] * 1 * cart[thing][:count]
         puts "1"
         cart[:new_name][:price] = coupon[:cost] / coupon[:num]
