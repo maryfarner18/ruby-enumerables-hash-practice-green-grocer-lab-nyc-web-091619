@@ -1,5 +1,10 @@
 def consolidate_cart(cart)
-  # code here
+  cart_hash = {}
+  
+  cart.map do |n| 
+    if cart_hash[n]
+  end
+  
 end
 
 def apply_coupons(cart, coupons)
