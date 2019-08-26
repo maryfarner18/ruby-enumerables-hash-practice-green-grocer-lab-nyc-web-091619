@@ -23,7 +23,7 @@ describe "Grocer" do
  end
 
   describe "#consolidate_cart" do
-    xit "adds a count of one to each item when there are no duplicates" do
+    it "adds a count of one to each item when there are no duplicates" do
       cart = [find_item('TEMPEH'), find_item('PEANUTBUTTER'), find_item('ALMONDS')]
       result = consolidate_cart(cart)
       result.each do |item, attributes|
