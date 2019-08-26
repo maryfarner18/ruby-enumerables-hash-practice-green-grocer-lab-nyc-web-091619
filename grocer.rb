@@ -17,13 +17,13 @@ def apply_coupons(cart, coupons)
   
   coupons.each do |coupon|
       thing = coupon[:item]
-      new_name = "#{thing} W/COUPON"
+      :new_name = "#{thing} W/COUPON"
       puts "New_name = #{new_name}"
       if cart.has_key?(thing)
         
-        cart[new_name][:clearance] = true
-        cart[new_name][:count] = cart[thing][:count] / coupon[:num] * 1 * cart[thing][:count]
-        cart[new_name][:price] = coupon[:cost] / coupon[:num]
+        cart[:new_name][:clearance] = true
+        cart[:new_name][:count] = cart[thing][:count] / coupon[:num] * 1 * cart[thing][:count]
+        cart[:new_name][:price] = coupon[:cost] / coupon[:num]
         
         cart[thing][:count] %= coupon[:num]
         cart[thing][:clearance] = true
