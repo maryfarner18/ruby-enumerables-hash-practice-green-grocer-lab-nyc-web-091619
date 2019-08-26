@@ -24,11 +24,8 @@ def apply_coupons(cart, coupons)
         cart[new_name][:count] = cart[thing][:count] / coupon[:num] * 1 * cart[thing][:count]
         cart[new_name][:price] = coupon[:cost] / coupon[:num]
         
-        if cart[thing][:count] % coupon[:num] == 0
-          cart.delete[thing]
-        else
-          cart[thing][:count] %= coupon[:num]
-        end
+        cart[thing][:count] %= coupon[:num]
+        cart[thing][:clearance] = true
         
       end 
     
