@@ -14,8 +14,8 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  puts "OG Cart = \n #{cart}\n"
-  puts "Coupons = \n #{coupons}"
+  puts "\nOG Cart = \n #{cart}\n"
+  puts "\nCoupons = \n #{coupons}"
   
   
   coupons.each do |coupon|
@@ -46,7 +46,7 @@ def apply_coupons(cart, coupons)
       end 
     
   end
-  puts "New Cart = \n #{cart}"
+  puts "\nNew Cart = \n #{cart}"
   
   cart
   
