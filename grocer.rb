@@ -16,6 +16,8 @@ end
 def apply_coupons(cart, coupons)
   puts "OG Cart = \n #{cart}\n"
   puts "Coupons = \n #{coupons}"
+  
+  
   coupons.each do |coupon|
       thing = coupon[:item]
       new_name = "#{thing} W/COUPON"
@@ -39,6 +41,8 @@ def apply_coupons(cart, coupons)
         #Adjust the old item in the cart w/o coupon
         cart[thing][:count] -= coupon[:num]
         cart[thing][:clearance] = true
+        
+        cart[new_name][:clearance] = (cart[thing][:count] >0? false : true)
   
       end 
     
