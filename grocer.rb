@@ -1,9 +1,9 @@
 def consolidate_cart(cart)
   cart_hash = {}
-  puts cart
+  puts "The cart is #{cart}"
   cart.each do |n| 
     n.each_key do |key|
-      puts n
+      puts "n is #{n}"
       if cart_hash[key]
         cart_hash[key][:count] += 1
       else
