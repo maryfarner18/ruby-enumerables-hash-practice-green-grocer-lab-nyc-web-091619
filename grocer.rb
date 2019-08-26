@@ -18,6 +18,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
       thing = coupon[:item]
       new_name = "#{thing} W/COUPON"
+      puts "New_name = #{new_name}"
       if cart[thing]
         cart[new_name][:clearance] = true
         cart[new_name][:count] = cart[thing][:count] / coupon[:num] * 1 * cart[thing][:count]
