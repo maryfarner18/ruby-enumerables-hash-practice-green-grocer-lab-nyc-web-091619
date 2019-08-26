@@ -3,6 +3,7 @@ def consolidate_cart(cart)
   puts cart
   cart.each do |n| 
     n.each_key do |key|
+      puts n
       if cart_hash[key]
         cart_hash[key][:count] += 1
       else
