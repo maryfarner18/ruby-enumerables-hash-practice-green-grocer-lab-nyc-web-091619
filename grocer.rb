@@ -1,12 +1,10 @@
 def consolidate_cart(cart)
   cart_hash = {}
   cart.map do |n| 
-    n.reduce(cart_hash) do |memo, (key,value)|
-      if !memo[key]
-        memo[key] = value
-        memo[key][:count] = 1
+      if cart_hash[key]
+        cart_hash[key][:count] += 1
       else
-        memo[key][:count] += 1
+        cart_hash[key] = n
       end
       memo
     end
