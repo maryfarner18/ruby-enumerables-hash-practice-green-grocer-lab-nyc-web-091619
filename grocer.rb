@@ -2,7 +2,7 @@ def consolidate_cart(cart)
   cart_hash = {}
   cart.map do |n| 
     n.reduce(cart_hash) do |memo, (key,value)|
-      if !memo[key] do
+      if !memo[key]
         memo[key] = value
         memo[key][:count] = 1
       else
