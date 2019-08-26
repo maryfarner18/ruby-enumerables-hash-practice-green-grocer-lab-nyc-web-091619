@@ -41,8 +41,6 @@ def apply_coupons(cart, coupons)
         cart[thing][:count] -= coupon[:num]
         cart[thing][:clearance] = true
         
-        #check if clearance item still on clearance
-        cart[new_name][:clearance] = (cart[thing][:count] >0? false : true)
   
       end 
     
