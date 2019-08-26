@@ -1,7 +1,7 @@
 def consolidate_cart(cart)
   
   cart.map do |n| 
-    n.reduce({}) { memo, 
+    n.reduce({}) do |memo, (key,value)|
   end
   
 end
