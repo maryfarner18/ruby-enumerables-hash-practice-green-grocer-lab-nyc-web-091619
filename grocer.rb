@@ -42,7 +42,7 @@ def apply_coupons(cart, coupons)
       end 
     
   end
-  puts "Cart = \n #{cart}"
+  puts "New Cart = \n #{cart}"
   puts "Coupons = \n #{coupons}"
   cart
   
