@@ -1,6 +1,6 @@
 def consolidate_cart(cart)
   cart_hash = {}
-  
+  puts cart
   cart.each do |n| 
     n.each_key do |key|
       if cart_hash[key]
