@@ -8,6 +8,7 @@ def consolidate_cart(cart)
       else
         memo[key][:count] += 1
       end
+      memo
     end
   end
   
