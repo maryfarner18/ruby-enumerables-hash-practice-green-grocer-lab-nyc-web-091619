@@ -61,5 +61,8 @@ def checkout(cart, coupons)
   cart_hash.each_key do |key|
     total += cart_hash[key][:count] * cart_hash[key][:price]
   end
+  if total > 100 
+    total = (total * 0.90).round(2)
+  end
   total
 end
