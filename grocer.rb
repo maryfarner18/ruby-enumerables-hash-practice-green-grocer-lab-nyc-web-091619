@@ -45,7 +45,6 @@ end
 
 def apply_clearance(cart)
   cart.each_key do |key|
-    puts "Key = #{key}"
     if cart[key][:clearance] == true then
       cart[key][:price] = (cart[key][:price] * 0.80).round(2)
     end
