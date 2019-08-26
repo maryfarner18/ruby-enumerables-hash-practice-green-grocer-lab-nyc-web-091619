@@ -14,7 +14,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  
+  puts "OG Cart = \n #{cart}"
   coupons.each do |coupon|
       thing = coupon[:item]
       new_name = "#{thing} W/COUPON"
