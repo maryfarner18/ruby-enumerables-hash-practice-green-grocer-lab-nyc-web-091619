@@ -1,8 +1,7 @@
 def consolidate_cart(cart)
-  cart_hash = {}
   
   cart.map do |n| 
-    if cart_hash[n]
+    n.
   end
   
 end
