@@ -46,7 +46,7 @@ end
 def apply_clearance(cart)
   cart.each_key do |key|
     if cart[key][:clearance]
-      cart[key][:price] *= 0.80
+      cart[key][:price] *= 0.8
     end
   end
   puts cart
