@@ -24,8 +24,9 @@ def apply_coupons(cart, coupons)
         cart[new_name][:price] = coupon[:cost] / coupon[:num]
         
         if cart[thing][:count] % coupon[:num] == 0
-          cart
+          cart.delete[thing]
         else
+          cart[thing][:count] = 
         end
       end 
     
